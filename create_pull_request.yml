@@ -31,8 +31,6 @@ jobs:
             repo: context.repo.repo,
             title: "${{ github.event.client_payload.PullRequestTitle }}",
             head: "${{ github.event.client_payload.ReleaseBranchName }}-docs",
-            base: "${{ github.event.client_payload.PullRequestBase }}",
-            body: `${{ github.event.client_payload.PullRequestBody }}`
           });
           return response.data.number
 
